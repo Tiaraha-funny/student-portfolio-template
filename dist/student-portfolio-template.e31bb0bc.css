@@ -1,0 +1,138 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Montserrat-Bold.e3209a3b.woff2') format('woff2'),
+        url('/Montserrat-Bold.7fc4e748.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Montserrat-Regular.fa1b514f.woff2') format('woff2'),
+        url('/Montserrat-Regular.f04f0a31.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Montserrat-Medium.18427962.woff2') format('woff2'),
+        url('/Montserrat-Medium.dcfd4fb1.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/Montserrat-Regular.fa1b514f.woff2') format('woff2'),
+        url('/Montserrat-SemiBold.1e2b907d.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: "Montserrat";
+    background-color: #F2F2F2;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+article {
+    border: 1px transparent solid;
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 12px;
+    margin: 12px;
+}
+
+.personal__image {
+    border-radius: 10px;
+}
+
+.personal__info--contacts--email::before {
+    content: url("/gmail.ac54c90d.svg");
+}
+
+.personal__info--contacts--phone--number::before {
+    content: url("/phone.00c8e429.svg");
+}
+
+.personal__info {
+    border-radius: 12px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.container__personal--info {
+    grid-column-start: 1;
+    grid-column-end: 2,
+}
+
+.container__personal--skills {
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+.skills__navigation--lists--items {
+    list-style: none;
+}
+
+.skills__navigation--lists--items label {
+    margin-inline-end: 20px;
+}
+
+.skills__projects {
+    display: flex;
+    flex-direction: row;
+}
+
+.feature {
+    margin-inline-end: 30px;
+}
+
+.blog {
+    display: flex;
+    flex-direction: row;
+}
+
+.feature__links--code {
+    padding: 16px;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: #ffffff;
+    color: rgb(159, 159, 245);
+}
+
+.feature__links--demo {
+    padding: 16px;
+    background-color: #4a2df1;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.skills__main-buttons button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.skills__main-buttons button:hover {
+    color: #ffffff;
+    background-color: #4a2df1;
+    outline: none;
+}
+
+/*# sourceMappingURL=/student-portfolio-template.e31bb0bc.css.map */
