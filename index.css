@@ -85,15 +85,23 @@ article {
 
 .skills__navigation--lists--items {
     list-style: none;
+    line-height: 30px;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-evenly; */
+    align-items: center;
 }
 
 .skills__navigation--lists--items label {
     margin-inline-end: 20px;
+    margin-block-end: 30px;
 }
 
 .skills__projects {
     display: flex;
     flex-direction: row;
+    background-color: #f5f8fa;
+    margin-bottom: 30px;
 }
 
 .feature {
@@ -133,4 +141,8 @@ article {
     color: #ffffff;
     background-color: #4a2df1;
     outline: none;
+}
+
+button {
+    cursor: pointer;
 }

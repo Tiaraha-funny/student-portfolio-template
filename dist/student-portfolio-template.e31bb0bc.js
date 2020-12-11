@@ -33902,40 +33902,68 @@ exports.default = _default;
 module.exports = "/blog.90097583.png";
 },{}],"projects.json":[function(require,module,exports) {
 module.exports = [{
-  "id": 1,
-  "img": "photograph.png",
+  "id": "1",
+  "img": "https://iili.io/KxZmla.png",
   "description": "This responsive web UI design is for a fictitious and unnamed news site. I worked on html and css to create a responsive design.",
   "title": "Photograph",
   "code": "https://github.com/Tiaraha-funny/photograph",
+  "app": "https://tiaraha-funny.github.io/photograph/",
   "project": "Responsive"
 }, {
-  "id": 2,
-  "img": "../images/hungry-student.png",
+  "id": "2",
   "description": "In this project, I worked on Vannilla Javascript. It offers the users to check the food that they like. They can add their food by clicking the add buttons. They can see their amount of their choosen food in the other side of the list and it is totaled in the button of the list. Then they can comfirm their food and wait till it is ready.",
-  "title": "hungry-student",
+  "title": "Hungry Student",
   "code": "https://github.com/Tiaraha-funny/hungry-students-restaurants",
-  "project": "Vanilla"
+  "app": "https://hungry-students-restaurant-petah.netlify.app/",
+  "project": "Vanilla",
+  "img": "https://iili.io/KxZtiF.png"
 }, {
-  "id": 3,
-  "img": "../images/responsive-site.png",
-  "description": "This is one of our project in the front-end course, so we make it a good one",
-  "title": "responsive-site",
-  "code": "https://github.com/Tiaraha-funny/photograph",
-  "project": "Responsive"
+  "id": "3",
+  "description": "This is one of our project in the design course, so we make it a good one",
+  "title": "Responsive Site",
+  "code": "https://github.com/Tiaraha-funny/responsive/tree/main/responsive-news-site",
+  "project": "Responsive",
+  "app": "",
+  "img": "https://iili.io/KzahCv.png"
 }, {
-  "id": 4,
-  "img": "../images/movies.png",
+  "id": "4",
+  "img": "https://iili.io/Kxt3xI.png",
   "description": "In this project, I use react with an async function to fetch the movie lists.",
   "title": "Movie lists",
   "code": "https://github.com/Tiaraha-funny/React-movie-lists-WKP9",
+  "app": "https://movie-app-petah.netlify.app/",
   "project": "React"
 }, {
-  "id": 5,
-  "img": "../images/sport.png",
+  "id": "5",
+  "img": "https://iili.io/KxtFVt.png",
   "description": "This is one of the responsive design",
-  "title": "sport",
-  "code": "https://tiaraha-funny.github.io/front-end-assessment/",
+  "title": "Sport",
+  "code": "https://github.com/Tiaraha-funny/front-end-assessment",
+  "app": "https://tiaraha-funny.github.io/front-end-assessment/",
   "project": "Responsive"
+}, {
+  "id": 6,
+  "title": "Birthday App",
+  "description": "The app will show us whose person is the closest to have their birthday",
+  "code": "https://github.com/Tiaraha-funny/birthday-app",
+  "app": "https://birthday-app-petah.netlify.app/",
+  "project": "Vanilla",
+  "img": "https://iili.io/KxZZV1.png"
+}, {
+  "id": "7",
+  "title": "Html",
+  "description": "This project is only for learning how html. There is no style(no css, no javasrcipt)",
+  "code": "https://github.com/Tiaraha-funny/learning-html",
+  "app": "https://tiaraha-funny.github.io/learning-html/",
+  "project": "Html"
+}, {
+  "id": 8,
+  "title": "Country Quiz",
+  "description": "This project is just making a fun. It is a quiz about countries. You are asked to answer questions by choosing a name in the button.",
+  "code": "https://github.com/Tiaraha-funny/country-quiz",
+  "app": "https://country-quiz-petah.netlify.app/",
+  "project": "React",
+  "img": "https://iili.io/KxZko7.png"
 }];
 },{}],"Components.js/DisplayProjects.js":[function(require,module,exports) {
 "use strict";
@@ -33950,27 +33978,32 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function DisplayProjects(_ref) {
-  var project = _ref.project;
-  return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("article", {
-    key: project.id,
-    className: "skills__projects"
-  }, /*#__PURE__*/_react.default.createElement("div", {
-    className: "feature"
-  }, /*#__PURE__*/_react.default.createElement("img", {
-    src: project.img
-  })), /*#__PURE__*/_react.default.createElement("div", {
-    className: "feature__description"
-  }, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("p", null, " #", project.project), /*#__PURE__*/_react.default.createElement("h3", null, project.title)), /*#__PURE__*/_react.default.createElement("p", null, project.description), /*#__PURE__*/_react.default.createElement("div", {
-    className: "feature__links"
-  }, /*#__PURE__*/_react.default.createElement("a", {
-    href: "responsive-news-site/webroot/index.html"
-  }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "feature__links--demo"
-  }, "Demo")), /*#__PURE__*/_react.default.createElement("a", {
-    href: project.code
-  }, /*#__PURE__*/_react.default.createElement("button", {
-    className: "feature__links--code"
-  }, "Code"))))));
+  var projects = _ref.projects;
+  return /*#__PURE__*/_react.default.createElement("div", null, projects.map(function (project) {
+    return /*#__PURE__*/_react.default.createElement("div", {
+      key: project.id
+    }, /*#__PURE__*/_react.default.createElement("article", {
+      className: "skills__projects"
+    }, /*#__PURE__*/_react.default.createElement("div", {
+      className: "feature"
+    }, /*#__PURE__*/_react.default.createElement("a", {
+      href: project.app
+    }, /*#__PURE__*/_react.default.createElement("img", {
+      src: project.img
+    }))), /*#__PURE__*/_react.default.createElement("div", {
+      className: "feature__description"
+    }, /*#__PURE__*/_react.default.createElement("header", null, /*#__PURE__*/_react.default.createElement("p", null, " #", project.project), /*#__PURE__*/_react.default.createElement("h3", null, project.title)), /*#__PURE__*/_react.default.createElement("p", null, project.description), /*#__PURE__*/_react.default.createElement("div", {
+      className: "feature__links"
+    }, /*#__PURE__*/_react.default.createElement("a", {
+      href: project.app
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "feature__links--demo"
+    }, "App")), /*#__PURE__*/_react.default.createElement("a", {
+      href: project.code
+    }, /*#__PURE__*/_react.default.createElement("button", {
+      className: "feature__links--code"
+    }, "Code"))))));
+  }));
 }
 
 var _default = DisplayProjects;
@@ -33997,6 +34030,14 @@ function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return 
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
 
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && Symbol.iterator in Object(iter)) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -34017,55 +34058,46 @@ function Skills() {
 
   (0, _react.useEffect)(function () {
     setProjects(_projects.default);
-  });
+  }, []);
+
+  function handleAllProjects() {
+    console.log("These are all of the projects");
+    setProjects(_projects.default);
+  }
 
   function handleReactClick() {
     console.log("This is react");
-    var filterByProject = projects.filter(function (data) {
-      return data.project !== "React";
-    }).map(function (project) {
-      return /*#__PURE__*/_react.default.createElement("idv", null, /*#__PURE__*/_react.default.createElement(_DisplayProjects.default, {
-        project: project
-      }));
+    var filterReactByProject = projects.filter(function (data) {
+      return data.project === "React";
     });
-    setProjects(filterByProject);
-    console.log(projects);
+    console.log(_toConsumableArray(filterReactByProject));
+    setProjects(filterReactByProject);
   }
 
   function handleCssClick() {
     console.log("This is css");
-    var filterByProject = projects.filter(function (data) {
-      return data.project !== "Responsive";
-    }).map(function (project) {
-      return /*#__PURE__*/_react.default.createElement("idv", null, /*#__PURE__*/_react.default.createElement(_DisplayProjects.default, {
-        project: project
-      }));
+    var filterResponsiveByProject = projects.filter(function (data) {
+      return data.project === "Responsive";
     });
-    setProjects(filterByProject);
-    console.log(projects);
+    console.log(_toConsumableArray(filterResponsiveByProject));
+    setProjects(_toConsumableArray(filterResponsiveByProject));
   }
 
   function handleVanillaClick() {
     console.log("This is vanilla the apps");
-    var filterByProject = projects.filter(function (data) {
-      return data.project !== "Vanilla";
-    }).map(function (project) {
-      return /*#__PURE__*/_react.default.createElement("idv", null, /*#__PURE__*/_react.default.createElement(_DisplayProjects.default, {
-        project: project
-      }));
+    var filterVanillaByProject = projects.filter(function (data) {
+      return data.project === "Vanilla";
     });
-    setProjects(filterByProject);
-    console.log(projects);
+    console.log(_toConsumableArray(filterVanillaByProject));
+    setProjects(_toConsumableArray(filterVanillaByProject));
   }
 
-  function handleAllProjects() {
-    console.log("These are all of the projects");
-    var allProjects = projects.map(function (project) {
-      return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement(_DisplayProjects.default, {
-        project: project
-      }));
+  function handleHtmlClick() {
+    var filterHtmlByProject = projects.filter(function (data) {
+      return data.project === "Html";
     });
-    setProjects(allProjects);
+    console.log(_toConsumableArray(filterHtmlByProject));
+    setProjects(_toConsumableArray(filterHtmlByProject));
   }
 
   return /*#__PURE__*/_react.default.createElement("div", {
@@ -34118,23 +34150,29 @@ function Skills() {
     href: "https://real-blog-about-vavatenina.netlify.app/"
   }, "Live app")), /*#__PURE__*/_react.default.createElement("div", {
     className: "features"
+  }, /*#__PURE__*/_react.default.createElement("a", {
+    href: "https://real-blog-about-vavatenina.netlify.app/"
   }, /*#__PURE__*/_react.default.createElement("img", {
     src: _blog.default
-  }))), /*#__PURE__*/_react.default.createElement("article", {
+  })))), /*#__PURE__*/_react.default.createElement("article", {
     className: "skills__main"
   }, /*#__PURE__*/_react.default.createElement("header", {
     className: "skills__main-heading"
   }, /*#__PURE__*/_react.default.createElement("h4", null, "Projects (3)")), /*#__PURE__*/_react.default.createElement("div", {
     className: "skills__main-buttons"
   }, /*#__PURE__*/_react.default.createElement("button", {
+    onClick: handleAllProjects
+  }, "All"), /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleReactClick
   }, "React"), /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleVanillaClick
   }, "Vanilla"), /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleCssClick
   }, "Responsive"), /*#__PURE__*/_react.default.createElement("button", {
-    onClick: handleAllProjects
-  }, "All"))));
+    onClick: handleHtmlClick
+  }, "Html")), /*#__PURE__*/_react.default.createElement(_DisplayProjects.default, {
+    projects: projects
+  })));
 }
 
 var _default = Skills;
@@ -34283,7 +34321,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "65298" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62652" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

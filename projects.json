@@ -1,45 +1,76 @@
-[
+[   
     {
-        "id": 1,
-        "img": "photograph.png",
+        "id": "1",
+        "img": "https://iili.io/KxZmla.png",
         "description": "This responsive web UI design is for a fictitious and unnamed news site. I worked on html and css to create a responsive design.",
         "title":"Photograph",
         "code": "https://github.com/Tiaraha-funny/photograph",
+        "app": "https://tiaraha-funny.github.io/photograph/",
         "project":"Responsive"
     },
 
     {
-        "id": 2,
-        "img": "../images/hungry-student.png",
+        "id": "2",
         "description": "In this project, I worked on Vannilla Javascript. It offers the users to check the food that they like. They can add their food by clicking the add buttons. They can see their amount of their choosen food in the other side of the list and it is totaled in the button of the list. Then they can comfirm their food and wait till it is ready.",
-        "title": "hungry-student",
+        "title": "Hungry Student",
         "code": "https://github.com/Tiaraha-funny/hungry-students-restaurants",
-        "project": "Vanilla"
+        "app": "https://hungry-students-restaurant-petah.netlify.app/",
+        "project": "Vanilla",
+        "img": "https://iili.io/KxZtiF.png"
     },
 
     {
-        "id": 3,
-        "img": "../images/responsive-site.png",
-        "description": "This is one of our project in the front-end course, so we make it a good one",
-        "title": "responsive-site",
-        "code": "https://github.com/Tiaraha-funny/photograph",
-        "project":"Responsive"
+        "id": "3",
+        "description": "This is one of our project in the design course, so we make it a good one",
+        "title": "Responsive Site",
+        "code": "https://github.com/Tiaraha-funny/responsive/tree/main/responsive-news-site",
+        "project":"Responsive",
+        "app": "",
+        "img": "https://iili.io/KzahCv.png"
     },
 
     {
-        "id": 4,
-        "img": "../images/movies.png",
+        "id": "4",
+        "img": "https://iili.io/Kxt3xI.png",
         "description": "In this project, I use react with an async function to fetch the movie lists.",
         "title": "Movie lists",
         "code": "https://github.com/Tiaraha-funny/React-movie-lists-WKP9",
+        "app": "https://movie-app-petah.netlify.app/",
         "project": "React"
     },
     {
-        "id": 5,
-        "img": "../images/sport.png",
+        "id": "5",
+        "img": "https://iili.io/KxtFVt.png",
         "description": "This is one of the responsive design",
-        "title": "sport",
-        "code": "https://tiaraha-funny.github.io/front-end-assessment/",
+        "title": "Sport",
+        "code": "https://github.com/Tiaraha-funny/front-end-assessment",
+        "app": "https://tiaraha-funny.github.io/front-end-assessment/",
         "project":"Responsive"
+    },
+    {   
+        "id": 6,
+        "title": "Birthday App",
+        "description": "The app will show us whose person is the closest to have their birthday",
+        "code": "https://github.com/Tiaraha-funny/birthday-app",
+        "app": "https://birthday-app-petah.netlify.app/",
+        "project": "Vanilla",
+        "img": "https://iili.io/KxZZV1.png"
+    },
+    {
+        "id": "7",
+        "title": "Html",
+        "description": "This project is only for learning how html. There is no style(no css, no javasrcipt)",
+        "code": "https://github.com/Tiaraha-funny/learning-html",
+        "app": "https://tiaraha-funny.github.io/learning-html/",
+        "project": "Html"
+    },
+    {
+        "id": 8,
+        "title": "Country Quiz",
+        "description": "This project is just making a fun. It is a quiz about countries. You are asked to answer questions by choosing a name in the button.",
+        "code": "https://github.com/Tiaraha-funny/country-quiz",
+        "app": "https://country-quiz-petah.netlify.app/",
+        "project": "React",
+        "img": "https://iili.io/KxZko7.png"
     }
 ]

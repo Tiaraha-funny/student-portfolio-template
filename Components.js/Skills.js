@@ -9,51 +9,46 @@ function Skills() {
 
   useEffect(() => {
     setProjects(projectsData);
-  });
+  }, []);
+
+  function handleAllProjects() {
+    console.log("These are all of the projects");
+    setProjects(projectsData);
+  }
 
   function handleReactClick() {
     console.log("This is react");
-    const filterByProject = projects
-      .filter((data) => data.project !== "React")
-      .map((project) => (
-        <idv>
-          <DisplayProjects project={project} />
-        </idv>
-      ));
-    setProjects(filterByProject);
-    console.log(projects);
+    const filterReactByProject = projects.filter(
+      (data) => data.project === "React"
+    );
+    console.log([...filterReactByProject]);
+    setProjects(filterReactByProject);
   }
 
   function handleCssClick() {
     console.log("This is css");
-    const filterByProject = projects
-      .filter((data) => data.project !== "Responsive")
-      .map((project) => (
-        <idv>
-          <DisplayProjects project={project} />
-        </idv>
-      ));
-    setProjects(filterByProject);
-    console.log(projects);
+    const filterResponsiveByProject = projects.filter(
+      (data) => data.project === "Responsive"
+    );
+    console.log([...filterResponsiveByProject]);
+    setProjects([...filterResponsiveByProject]);
   }
 
   function handleVanillaClick() {
     console.log("This is vanilla the apps");
-    const filterByProject = projects
-      .filter((data) => data.project !== "Vanilla")
-      .map((project) => (
-        <idv>
-          <DisplayProjects project={project} />
-        </idv>
-      ));
-    setProjects(filterByProject);
-    console.log(projects);
+    const filterVanillaByProject = projects.filter(
+      (data) => data.project === "Vanilla"
+    );
+    console.log([...filterVanillaByProject]);
+    setProjects([...filterVanillaByProject]);
   }
 
-  function handleAllProjects() {
-    console.log("These are all of the projects");
-    const allProjects = projects.map(project => <div><DisplayProjects project={project} /></div>)
-    setProjects(allProjects);
+  function handleHtmlClick() {
+    const filterHtmlByProject = projects.filter(
+      (data) => data.project === "Html"
+    );
+    console.log([...filterHtmlByProject]);
+    setProjects([...filterHtmlByProject]);
   }
 
   return (
@@ -104,7 +99,9 @@ function Skills() {
           <a href="https://real-blog-about-vavatenina.netlify.app/">Live app</a>
         </div>
         <div className="features">
-          <img src={blog} />
+          <a href="https://real-blog-about-vavatenina.netlify.app/">
+            <img src={blog} />
+          </a>
         </div>
       </article>
 
@@ -113,11 +110,13 @@ function Skills() {
           <h4>Projects (3)</h4>
         </header>
         <div className="skills__main-buttons">
+          <button onClick={handleAllProjects}>All</button>
           <button onClick={handleReactClick}>React</button>
           <button onClick={handleVanillaClick}>Vanilla</button>
           <button onClick={handleCssClick}>Responsive</button>
-          <button onClick={handleAllProjects}>All</button>
+          <button onClick={handleHtmlClick}>Html</button>
         </div>
+        <DisplayProjects projects={projects} />
       </article>
     </div>
   );

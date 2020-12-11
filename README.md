@@ -1,6 +1,6 @@
 # Portfolio
 
-Challenge: Create all the elements in the given designs and then create a portfolio with your own content. You can create your own layout. Don’t look at the existing solution. Fulfill user stories below:
+This project keeps most of the codes that I have practised. I have my own json file to keep the projects. I filter them everytime I click the button handles the code that I want to see like css code or javascript code.
 
 ![image](./assets/portfolio.png)
 This image is just a preview, the full design is on the figma file!
